@@ -4,14 +4,14 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 
-var position = require('./service');
+var photo = require('./photo');
 
 app.set('port', process.env.PORT || 9909);
 app.use(bodyParser.urlencoded({ extended: false })) ;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../web')));
 app.use(express.static(path.join(__dirname, '../app')));
-app.post('/getAllMarker',service.getAllMarker);
+app.post('/getAllInfo',photo.getAllInfo);
 
 
 app.listen(app.get('port'),function(){
