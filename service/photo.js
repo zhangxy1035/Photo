@@ -14,7 +14,7 @@ connection.connect();
  * @param res
  */
 exports.getAllInfo = function(req,res) {
-    console.log('获取所有标记点服务器端');
+    console.log('获取所有信息服务器端');
     console.log(req.body);
 
     var con = connection.query("select * from t_photo",function(err,result,fields){
@@ -35,6 +35,7 @@ exports.getAllInfo = function(req,res) {
             };
             fPhoto.push(new_1item);
         });
+        console.log(fPhoto);
         res.send({retCode:1,data:fPhoto});
     })
 
