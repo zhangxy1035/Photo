@@ -18,10 +18,10 @@ angular.module('myApp',['PCFactory'])
                 var new_1item = {
                     id: data.data[i].id,
                     myName: data.data[i].myName,
-                    friendPhoto: {
-                        type:'image/png',
-                        data:data.data[i].friendPhoto
-                    },
+                    friendPhoto:
+//                        type:'image/png',
+                        data.data[i].friendPhoto,
+
                     sayMe: data.data[i].sayMe,
                     sayWords: data.data[i].sayWords,
                     knowTime: data.data[i].knowTime,

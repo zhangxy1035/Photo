@@ -1,5 +1,6 @@
 
 var sql = require('mysql');
+var  bower = require('bower');
 var connection = sql.createConnection({
     host:'localhost',
     user:'root',
