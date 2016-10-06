@@ -34,9 +34,7 @@ angular.module('myApp',['PCFactory'])
 //                var sayWords = data.data[i].sayWords;
 //                var knowTime = data.data[i].knowTime;
 //                var friendName = data.data[i].friendName;
-                var friendPhoto = new Blob([data.data[i].friendPhoto], {
-                    type: 'image/png'
-                });
+                $scope.friendPhoto =data.data[i].friendPhoto.data;
             }
             $scope.names = fPhoto;
 
